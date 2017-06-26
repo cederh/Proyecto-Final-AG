@@ -1,0 +1,14 @@
+  Universidad de El Salvador.
+Facultad Multidiciplinaria Oriental.
+  Depto. Ingenieria y Arq.
+
+Materia: Algoritmos Graficos.
+Docente: Ing. Ludwin Hernández.
+
+Proyecto Final: Simulacion del Sistema Solar
+
+Alumno: Carlos Edenilson Romero Hernández 
+        Ana Ruth Sánchez Henríquez
+
+PD: Compilar con SOIL
+g++ main.cpp -o Sistema_Solar -lGL -lglut -lGLU -lSOIL
