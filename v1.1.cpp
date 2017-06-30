@@ -1166,6 +1166,124 @@ void tierraInfo(){
 	glutSwapBuffers();
 }
 
+void lunaInfo(){
+
+	pauseAnimation();
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity(); 
+    estrellas();
+     
+    glTranslatef(-160.0f, 0.0f, 0.0f);
+    glPushMatrix();
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D,texLuna);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);
+    gluSphere(pSphere,100, 60, 60);
+    glDisable(GL_TEXTURE_2D);
+    glPopMatrix();
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glRasterPos3f( 250 , 250 , 0);
+    sprintf(text, "Luna.");
+    for(int i = 0; text[i] != '\0'; i++)
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , 230 , 0);
+    sprintf(text, "La Luna es el unico satelite natural de la Tierra, Junto");
+    for(int i = 0; text[i] != '\0'; i++)
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , 210 , 0);
+    sprintf(text, "al Sol, La luna ejerce mayor influencia sobre el planeta,");
+    for(int i = 0; text[i] != '\0'; i++)
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , 190 , 0);
+    sprintf(text, "siendo las mareas el efecto mas notable"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);  
+
+    glRasterPos3f( 120 , 160 , 0);
+    sprintf(text, "La Lina es el mayor satelite natura en relacion al tamaño de"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);  
+
+    glRasterPos3f( 120 , 140 , 0);
+    sprintf(text, "su diametro y un 60 de la densidad terrestre. Nuestra Luna"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);  
+
+    glRasterPos3f( 120 , 120 , 0);
+    sprintf(text, "es mayor a Pluton."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , 90 , 0);
+    sprintf(text, "La Luna es el objeto mas brillante despues del Sol a pesar"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , 70 , 0);
+    sprintf(text, "de que su superficie solo refleja un 7 de la radiacion"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , 50 , 0);
+    sprintf(text, "proveniente de nestra estrella, absorbiendo el 93 restante."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+    
+    glRasterPos3f( 120 , 30 , 0);
+    sprintf(text, "La distancia a la que orbita a la Tierra hace que la Luna y el"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , 10 , 0);
+    sprintf(text, "Sol aparenten tener el mismo tamaño."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , -20 , 0);
+    sprintf(text, "En comparación con la Tierra:"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , -40 , 0);
+    sprintf(text, "Diametro Ecuatorial: 0.27 x Tierra."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , -60 , 0);
+    sprintf(text, "Gravedad en la superficie: 0.17 x Tierra."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , -80 , 0);
+    sprintf(text, "Temperatura en superficie: -23 C"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , -100 , 0);
+    sprintf(text, "Periodo de rotacion: 27 Dias"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , -120 , 0);
+    sprintf(text, "Periodo de orbita alrededor de la Tierra: 27 Dias"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( 120 , -140 , 0);
+    sprintf(text, "Distancia al centro galactico: 384 000 km."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+	glutSwapBuffers();
+}
+
 void marteInfo(){
 
 	pauseAnimation();
@@ -1727,6 +1845,109 @@ void neptunoInfo(){
     glutSwapBuffers();
 }
 
+//Funcion de ayuda.
+void ayuda(){
+
+	pauseAnimation();
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity(); 
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glRasterPos3f( -20 , 250 , 0);
+    sprintf(text, "AYUDA.");
+    for(int i = 0; text[i] != '\0'; i++)
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( -280 , 230 , 0);
+    sprintf(text, "Bienvenido a la pestana ayuda:");
+    for(int i = 0; text[i] != '\0'; i++)
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( -280 , 200 , 0);
+    sprintf(text, "Fecha Arriba: Desplaza la camara a una vista superior.");
+    for(int i = 0; text[i] != '\0'; i++)
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( -280 , 180 , 0);
+    sprintf(text, "Fecha Abajo: Desplaza la camara a una vista inferior."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);  
+
+    glRasterPos3f( -280 , 160 , 0);
+    sprintf(text, "Fecha Izquiera: Desplaza la camara hacia la izquierda"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);  
+
+    glRasterPos3f( -280 , 140 , 0);
+    sprintf(text, "Fecha Derecha: Desplaza la camara hacia la derecha."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);  
+
+    glRasterPos3f( -280 , 120 , 0);
+    sprintf(text, "Tecla Q: Acerca la camara."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+    glRasterPos3f( -280 , 100 , 0);
+    sprintf(text, "Tecla W: Aleja la camara."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( -280 , 80 , 0);
+    sprintf(text, "Tecla 1: Adelanta el tiempo."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+    glRasterPos3f( -280 , 60 , 0);
+    sprintf(text, "Tecla 2: Atrasa el tiempo."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+    glRasterPos3f( -280 , 40 , 0);
+    sprintf(text, "Tecla 3: Amplia las orbitas."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+    glRasterPos3f( -280 , 20 , 0);
+    sprintf(text, "Tecla 4: Reduce las orbitas."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+    glRasterPos3f( -280 , 0 , 0);
+    sprintf(text, "Tecla 5: Oculta las orbitas."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+
+    glRasterPos3f( -280 , -20 , 0);
+    sprintf(text, "Tecla 6: Muestra las orbitas."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+    glRasterPos3f( -280 , -40 , 0);
+    sprintf(text, "Tecla esc: Cierra el simulador."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);  
+
+
+    glRasterPos3f( -280 , -70 , 0);
+    sprintf(text, "Para mirar la informacion de cualquier planeta puede apretar Click Izquierdo"); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+    glRasterPos3f( -280 , -90 , 0);
+    sprintf(text, "Luego seleccionar el planeta deseado y listo."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+
+    glRasterPos3f( -280 , -120 , 0);
+    sprintf(text, "Para salir de la informacion aprete el Click Izquierdo."); 
+    for(int i = 0; text[i] != '\0'; i++)
+    	glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]); 
+
+    glutSwapBuffers();
+}
+
 //Creamos un menu para poder acceder a la informacion de los planetas.
 void menu (int opc){
 
@@ -1761,35 +1982,47 @@ void menu (int opc){
 
     case 5:
 
-    	marteInfo();
+    	lunaInfo();
 
     break;
 
     case 6:
 
-    	jupiterInfo();
- 
+    	marteInfo();
+
     break;
 
     case 7:
 
-    	saturnoInfo();
+    	jupiterInfo();
  
     break;
 
     case 8:
 
+    	saturnoInfo();
+ 
+    break;
+
+    case 9:
+
     	uranoInfo();
 
     break;
 
-    case 9:
+    case 10:
 
     	neptunoInfo();
  
     break;
 
-    case 10:
+    case 11:
+
+        ayuda();
+
+    break;
+
+    case 12:
     	exit(0);
     }
 }
@@ -2038,12 +2271,14 @@ int main(int argc, char* argv[]){
     glutAddMenuEntry("Mercurio",2);
     glutAddMenuEntry("Venus",3);
     glutAddMenuEntry("Tierra",4);
-    glutAddMenuEntry("Marte",5);
-    glutAddMenuEntry("Jupiter",6);
-    glutAddMenuEntry("Saturno",7);
-    glutAddMenuEntry("Urano",8);
-    glutAddMenuEntry("Neptuno",9);
-    glutAddMenuEntry("Salir",10);
+    glutAddMenuEntry("Luna", 5);
+    glutAddMenuEntry("Marte",6);
+    glutAddMenuEntry("Jupiter",7);
+    glutAddMenuEntry("Saturno",8);
+    glutAddMenuEntry("Urano",9);
+    glutAddMenuEntry("Neptuno",10);
+    glutAddMenuEntry("Ayuda",11);
+    glutAddMenuEntry("Salir",12);
 //Usamos el boton derecho del mause.
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 
