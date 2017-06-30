@@ -6,9 +6,16 @@ Materia: Algoritmos Graficos.
 Docente: Ing. Ludwin Hernández.
 
 Proyecto Final: Simulacion del Sistema Solar
+                 (Solar System Simulator)
 
 Alumno: Carlos Edenilson Romero Hernández 
         Ana Ruth Sánchez Henríquez
 
-PD: Compilar con SOIL
-g++ main.cpp -o Sistema_Solar -lGL -lglut -lGLU -lSOIL
+Repositorio en Github: https://github.com/cederh/Proyecto-Final-AG.git
+
+
+Para compilar el programa debe utilizar SOIL.
+
+-Instaler la libreria de SOIL
+-Para compilar utilice:
+   g++ main.cpp -o Sistema_Solar -lGL -lglut -lGLU -lSOIL
