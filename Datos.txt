@@ -18,4 +18,4 @@ Para compilar el programa debe utilizar SOIL.
 
 -Instaler la libreria de SOIL
 -Para compilar utilice:
-   g++ main.cpp -o Sistema_Solar -lGL -lglut -lGLU -lSOIL
+   g++ "Nombre del Archivo".cpp -o Sistema_Solar -lGL -lglut -lGLU -lSOIL
